@@ -3,19 +3,49 @@ package plantsPackage;
 import java.math.BigDecimal;
 
 public class HangingPlantProducts {
+	private int pid;
 	private String pname;
 	private BigDecimal original_price;
 	private BigDecimal discount_price;
+	private String category;
+	private int rating;
 	private String image;
 
 	public HangingPlantProducts() {}
 
-	public HangingPlantProducts(String pname, BigDecimal original_price, BigDecimal discount_price, String image) {
+	public HangingPlantProducts(int pid ,String pname, BigDecimal original_price, BigDecimal discount_price, String category, int rating, String image) {
+		this.pid = pid;
 		this.pname = pname;
 		this.original_price = original_price;
 		this.discount_price = discount_price;
+		this.category = category;
+		this.rating = rating;
 		this.image = image;
 	}
+	
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	
 
 	public String getPname() {
 		return pname;
@@ -51,19 +81,14 @@ public class HangingPlantProducts {
 
 	@Override
 	public String toString() {
-		return "HangingPlantProducts [pname=" + pname + ", original_price=" + original_price + ", discount_price="
-				+ discount_price + ", image=" + image + "]";
+		return "HangingPlantProducts [pid=" + pid + ", pname=" + pname + ", original_price=" + original_price
+				+ ", discount_price=" + discount_price + ", category=" + category + ", rating=" + rating + ", image="
+				+ image + "]";
 	}
 
 	
 
-	//@Override
-//	public String toString() {
-//		return "HangingPlantProducts [pname=" + pname + ", price=" + price + ", discprice=" + discprice + ", image="
-//				+ image + ", getPname()=" + getPname() + ", getPrice()=" + getPrice() + ", getDiscprice()="
-//				+ getDiscprice() + ", getImage()=" + getImage() + ", getClass()=" + getClass() + ", hashCode()="
-//				+ hashCode() + ", toString()=" + super.toString() + "]";
-//	}
+	
 	
 
 	
